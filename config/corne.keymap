@@ -20,8 +20,8 @@
             display-name = "Base";
             bindings = <
     &kp GRAVE &kp Q    &kp W    &kp E    &kp R    &kp T       &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSLH
-    &trans     &kp A    &kp S    &kp D    &kp F    &kp G       &kp H    &kp J    &kp K    &kp L    &kp SCLN &trans
-    &trans     &kp Z    &kp X    &kp C    &kp V    &kp B       &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH &kp MINUS
+    &trans     &kp A    &kp S    &kp D    &kp F    &kp G       &kp H    &kp J    &kp K    &kp L    &kp SEMI &trans
+    &trans     &kp Z    &kp X    &kp C    &kp V    &kp B       &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH &kp MINUS
     &kp ESC    &kp TAB                                             &kp RET  &kp BSPC
                               &kp SPACE   &mo 1
             >;
@@ -31,7 +31,7 @@
             display-name = "Nav";
             bindings = <
     &trans &trans &kp HOME &kp PGUP &kp END  &trans     &trans &trans &trans &trans &trans &trans
-    &trans &trans &kp LEFT &kp DOWN &kp UP   &kp RGHT  &trans &trans &trans &trans &trans &trans
+    &trans &trans &kp LEFT &kp DOWN &kp UP   &kp RIGHT  &trans &trans &trans &trans &trans &trans
     &trans &trans &trans   &kp PGDN &trans   &trans     &trans &trans &trans &trans &trans &trans
     &mo 2   &trans                     &trans   &kp DEL
                               &trans   &trans
@@ -43,9 +43,9 @@
             bindings = <
     &kp LPAR  &kp RPAR  &kp LBRC  &kp RBRC  &kp LCBR  &kp RCBR  &trans &trans &trans &trans &trans &trans
     &kp LT    &kp GT    &kp EQUAL &kp PLUS  &kp MINUS &trans    &trans &trans &trans &trans &trans &trans
-    &kp STAR  &kp FSLH  &kp EXCL  &kp QMARK &kp TILDE &kp GRAVE &trans &trans &trans &trans &trans &trans
-    &kp AMPER &kp PIPE                     &kp COLN  &kp SCLN
-                              &kp DLLR   &kp AT
+    &kp STAR  &kp FSLH  &kp EXCL  &kp QUES  &kp TILDE &kp GRAVE &trans &trans &trans &trans &trans &trans
+    &kp AMPS &kp PIPE                     &kp COLON  &kp SEMI
+                              &kp DOLLAR   &kp AT
             >;
         };
 
@@ -55,7 +55,7 @@
     &kp N7 &kp N8 &kp N9 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
     &kp N4 &kp N5 &kp N6 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
     &kp N1 &kp N2 &kp N3 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-    &kp N0 &kp DOT                      &kp COMM &trans
+    &kp N0 &kp DOT                      &kp COMMA &trans
                               &trans   &trans
             >;
         };
