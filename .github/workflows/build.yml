@@ -1,0 +1,8 @@
+name: Build ZMK firmware
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk-build-action@v1
+    with:
+      config-path: config

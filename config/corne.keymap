@@ -1,0 +1,74 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+// Corne 42 positions (shield corne):
+//  Left: col0-col5 x row0-2 = 18  +  thumb row3:18,19 row4:20  = 21
+//  Right: col0-col5 x row0-2 = 18  +  thumb row3:39,40 row4:41  = 21
+//
+//  pos0  pos1  pos2  pos3  pos4  pos5    pos21 pos22 pos23 pos24 pos25 pos26
+//  pos6  pos7  pos8  pos9  pos10 pos11   pos27 pos28 pos29 pos30 pos31 pos32
+//  pos12 pos13 pos14 pos15 pos16 pos17   pos33 pos34 pos35 pos36 pos37 pos38
+//  pos18 pos19                           pos39 pos40
+//              pos20                     pos41
+
+        base {
+            display-name = "Base";
+            bindings = <
+    &kp GRAVE &kp Q    &kp W    &kp E    &kp R    &kp T       &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSLH
+    &trans     &kp A    &kp S    &kp D    &kp F    &kp G       &kp H    &kp J    &kp K    &kp L    &kp SCLN &trans
+    &trans     &kp Z    &kp X    &kp C    &kp V    &kp B       &kp N    &kp M    &kp COMM &kp DOT  &kp FSLH &kp MINUS
+    &kp ESC    &kp TAB                                             &kp RET  &kp BSPC
+                              &kp SPACE   &mo 1
+            >;
+        };
+
+        nav {
+            display-name = "Nav";
+            bindings = <
+    &trans &trans &kp HOME &kp PGUP &kp END  &trans     &trans &trans &trans &trans &trans &trans
+    &trans &trans &kp LEFT &kp DOWN &kp UP   &kp RGHT  &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans   &kp PGDN &trans   &trans     &trans &trans &trans &trans &trans &trans
+    &mo 2   &trans                     &trans   &kp DEL
+                              &trans   &trans
+            >;
+        };
+
+        sym {
+            display-name = "Sym";
+            bindings = <
+    &kp LPAR  &kp RPAR  &kp LBRC  &kp RBRC  &kp LCBR  &kp RCBR  &trans &trans &trans &trans &trans &trans
+    &kp LT    &kp GT    &kp EQUAL &kp PLUS  &kp MINUS &trans    &trans &trans &trans &trans &trans &trans
+    &kp STAR  &kp FSLH  &kp EXCL  &kp QMARK &kp TILDE &kp GRAVE &trans &trans &trans &trans &trans &trans
+    &kp AMPER &kp PIPE                     &kp COLN  &kp SCLN
+                              &kp DLLR   &kp AT
+            >;
+        };
+
+        num {
+            display-name = "Num";
+            bindings = <
+    &kp N7 &kp N8 &kp N9 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+    &kp N4 &kp N5 &kp N6 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+    &kp N1 &kp N2 &kp N3 &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+    &kp N0 &kp DOT                      &kp COMM &trans
+                              &trans   &trans
+            >;
+        };
+
+        func {
+            display-name = "Func";
+            bindings = <
+    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans    &trans
+    &bt BT_CLR &bootloader               &trans    &trans
+                              &trans    &trans
+            >;
+        };
+    };
+};
